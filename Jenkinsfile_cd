@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         dockerImage = 'ghfranjabour/lab3_big_data_infrastructure:latest'
-        containerName = 'lab4_cd'
+        containerName = 'lab3_cd'
     }
 
     stages {
