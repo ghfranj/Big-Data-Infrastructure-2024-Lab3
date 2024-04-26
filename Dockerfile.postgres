@@ -1,4 +1,4 @@
-FROM postgres:latest
+FROM postgres:13.1
 
 # Install necessary packages to interact with HashiCorp Vault
 
@@ -13,5 +13,5 @@ RUN apt-get update && apt-get install -y \
 COPY db/01-init.sh /docker-entrypoint-initdb.d/01-init.sh
 
 # Set permissions for the initialization script
-#RUN chmod +x /docker-entrypoint-initdb.d/01-init.sh
+RUN chmod +x /docker-entrypoint-initdb.d/01-init.sh
 
